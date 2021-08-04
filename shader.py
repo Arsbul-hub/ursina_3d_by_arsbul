@@ -1,6 +1,6 @@
 from pathlib import Path
 from panda3d.core import Shader as Panda3dShader
-from ursina import application
+from ursina_ import application
 
 default_vertex_shader = '''
 #version 430
@@ -86,7 +86,7 @@ class Shader:
 if __name__ == '__main__':
     from time import perf_counter
     t = perf_counter()
-    from ursina import *
+    from ursina_ import *
     app = Ursina()
     Entity(model='cube', shader=Shader())
     EditorCamera()

@@ -1,5 +1,5 @@
-from ursina import *
-from ursina.duplicate import duplicate
+from ursina_ import *
+from ursina_.duplicate import duplicate
 
 
 class Prismatoid(Mesh):

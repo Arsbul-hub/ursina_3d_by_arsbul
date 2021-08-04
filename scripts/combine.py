@@ -1,4 +1,4 @@
-from ursina import *
+from ursina_ import *
 
 
 
@@ -63,7 +63,7 @@ def combine(entity, analyze=False, auto_destroy=True, ignore=[]):
                 to_destroy.append(e)
 
     if auto_destroy:
-        from ursina import destroy
+        from ursina_ import destroy
         [destroy(e) for e in to_destroy]
 
     entity.model = Mesh(vertices=verts, triangles=tris, normals=norms, uvs=uvs, colors=cols, mode='triangle')
@@ -87,14 +87,14 @@ def get_vertices(entity, relative_to=None):
         temp_entity.position = v
         vertices.append(temp_entity.get_position(relative_to))
 
-    from ursina import destroy
+    from ursina_ import destroy
     destroy(temp_entity)
 
     return vertices
 
 
 if __name__ == '__main__':
-    from ursina import *
+    from ursina_ import *
     app = Ursina()
 
     p = Entity()

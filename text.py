@@ -3,12 +3,12 @@ from panda3d.core import Filename
 from panda3d.core import TextNode
 # from direct.interval.IntervalGlobal import Sequence, Func, Wait, SoundInterval
 
-import ursina
+import ursina_
 # from ursina import *
-from ursina import camera
-from ursina.entity import Entity
-from ursina.sequence import Sequence, Func, Wait
-from ursina import color
+from ursina_ import camera
+from ursina_.entity import Entity
+from ursina_.sequence import Sequence, Func, Wait
+from ursina_ import color
 # note:
 # <scale:n> tag doesn't work well in the middle of text.
 # only good for titles for now.
@@ -83,7 +83,7 @@ class Text(Entity):
         self.raw_text = text
 
         # clear stuff
-        from ursina.ursinastuff import destroy  # needed to destroy inline images
+        from ursina_.ursinastuff import destroy  # needed to destroy inline images
         for img in self.images:
             destroy(img)
         self.images = []
@@ -343,7 +343,7 @@ class Text(Entity):
         if value == True:
             self.create_background()
         elif self._background:
-            from ursina.ursinastuff import destroy
+            from ursina_.ursinastuff import destroy
             destroy(self._background)
 
 
@@ -372,8 +372,8 @@ class Text(Entity):
             tn.setY(tn.getY() - (halfheight * value[1] * 2 * self.size))
 
 
-    def create_background(self, padding=size*2, radius=size, color=ursina.color.black66):
-        from ursina import Quad, destroy
+    def create_background(self, padding=size*2, radius=size, color=ursina_.color.black66):
+        from ursina_ import Quad, destroy
 
         if self._background:
             destroy(self._background)
@@ -394,7 +394,7 @@ class Text(Entity):
 
 
     def appear(self, speed=.025, delay=0):
-        from ursina.ursinastuff import invoke
+        from ursina_.ursinastuff import invoke
         self.enabled = True
         # self.visible = True   # setting visible seems to reset the colors
         if self.appear_sequence:
@@ -421,14 +421,14 @@ class Text(Entity):
         if font:
             t.font = font
         w = t.width
-        from ursina import destroy
+        from ursina_ import destroy
         destroy(t)
         return w
 
 
 
 if __name__ == '__main__':
-    from ursina import *
+    from ursina_ import *
     app = Ursina()
     # Text.size = .001
     descr = dedent('''

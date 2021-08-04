@@ -1,4 +1,4 @@
-from ursina import *; ssao_shader = Shader(language=Shader.GLSL, fragment='''
+from ursina_ import *; ssao_shader = Shader(language=Shader.GLSL, fragment='''
 #version 140
 
 
@@ -94,7 +94,7 @@ void main() {
 }
 ''',
 
-default_input = {
+                                            default_input = {
     'numsamples' : 16,
     'radius' : 0.01, # 0.05 is broken and cool
     'amount' : 3.0,
@@ -102,9 +102,9 @@ default_input = {
     'falloff' : 0.000002,
     'random_texture' : Func(load_texture, 'noise'),
 }
-)
+                                            )
 if __name__ == '__main__':
-    from ursina import *
+    from ursina_ import *
     app = Ursina()
 
     e = Entity(model='sphere', color=color.orange)

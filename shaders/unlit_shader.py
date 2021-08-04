@@ -1,4 +1,4 @@
-from ursina import *; unlit_shader = Shader(language=Shader.GLSL, vertex = '''#version 140
+from ursina_ import *; unlit_shader = Shader(language=Shader.GLSL, vertex ='''#version 140
 
 
 uniform mat4 p3d_ModelViewProjectionMatrix;
@@ -14,7 +14,7 @@ void main() {
 }
 ''',
 
-fragment='''
+                                             fragment='''
 #version 140
 
 uniform sampler2D p3d_Texture0;
@@ -28,17 +28,17 @@ void main() {
 }
 
 ''',
-default_input={
+                                             default_input={
     'texture_scale' : Vec2(1,1),
     'texture_offset' : Vec2(.5,0),
 }
-)
+                                             )
 
 
 
 if __name__ == '__main__':
-    from ursina import *
-    from ursina.prefabs.primitives import *
+    from ursina_ import *
+    from ursina_.prefabs.primitives import *
     app = Ursina()
     # window.color=color.black
     # from ursina.lights import DirectionalLight

@@ -1,4 +1,4 @@
-from ursina import *
+from ursina_ import *
 
 fxaa_shader = Shader(language=Shader.GLSL,
 fragment='''

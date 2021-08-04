@@ -1,5 +1,5 @@
-from ursina import *
-from ursina.models.procedural.plane import Plane
+from ursina_ import *
+from ursina_.models.procedural.plane import Plane
 
 
 def Cube(bevel=0, subdivisions=(1,1,1), mode='triangle', **kwargs):

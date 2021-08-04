@@ -1,9 +1,9 @@
-from ursina import *
+from ursina_ import *
 
 class Sky(Entity):
 
     def __init__(self, **kwargs):
-        from ursina.shaders import unlit_shader
+        from ursina_.shaders import unlit_shader
         super().__init__(
             parent = render,
             name = 'sky',

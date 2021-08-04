@@ -1,4 +1,4 @@
-from ursina import *
+from ursina_ import *
 from copy import copy, deepcopy
 
 

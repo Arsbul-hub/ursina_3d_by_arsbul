@@ -1,4 +1,4 @@
-from ursina import *
+from ursina_ import *
 
 
 
@@ -129,7 +129,7 @@ class FirstPersonController(Entity):
 
 
 if __name__ == '__main__':
-    from ursina.prefabs.first_person_controller import FirstPersonController
+    from ursina_.prefabs.first_person_controller import FirstPersonController
     # window.vsync = False
     app = Ursina()
     # Sky(color=color.gray)

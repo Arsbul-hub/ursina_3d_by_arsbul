@@ -1,4 +1,4 @@
-from ursina import *
+from ursina_ import *
 
 model_names = ('quad', 'cube', 'sphere', 'plane')
 

@@ -4,12 +4,12 @@ from direct.showbase.ShowBase import ShowBase
 from direct.task.Task import Task
 import gltf
 
-from ursina import application
-from ursina import input_handler
-from ursina.window import instance as window
-from ursina.scene import instance as scene
-from ursina.camera import instance as camera
-from ursina.mouse import instance as mouse
+from ursina_ import application
+from ursina_ import input_handler
+from ursina_.window import instance as window
+from ursina_.scene import instance as scene
+from ursina_.camera import instance as camera
+from ursina_.mouse import instance as mouse
 
 import __main__
 time.dt = 0
@@ -100,7 +100,7 @@ class Ursina(ShowBase):
         mouse.enabled = True
         self.mouse = mouse
 
-        from ursina import gamepad
+        from ursina_ import gamepad
 
         scene.set_up()
         self._update_task = taskMgr.add(self._update, "update")
@@ -108,7 +108,7 @@ class Ursina(ShowBase):
         # try to load settings that need to be applied before entity creation
         application.load_settings()
 
-        from ursina import HotReloader
+        from ursina_ import HotReloader
         # make sure it's running from a file and not an interactive session.
         application.hot_reloader = HotReloader(__main__.__file__ if hasattr(__main__, '__file__') else 'None')
 
@@ -227,7 +227,7 @@ class Ursina(ShowBase):
 
     def run(self):
         if window.show_ursina_splash:
-            from ursina.prefabs import ursina_splash
+            from ursina_.prefabs import ursina_splash
 
         application.load_settings()
         print('development mode:', application.development_mode)

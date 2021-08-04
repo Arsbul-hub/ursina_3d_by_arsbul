@@ -1,15 +1,15 @@
 import sys
-from ursina.entity import Entity
+from ursina_.entity import Entity
 from panda3d.core import PerspectiveLens, OrthographicLens, LensNode, NodePath
 from panda3d.core import Camera as PandaCamera
 from panda3d.core import Texture as PandaTexture
 from direct.filter.FilterManager import FilterManager
-from ursina import application
-from ursina.scene import instance as scene
-from ursina.window import instance as window
-from ursina import color
-from ursina.texture import Texture
-from ursina.shader import Shader
+from ursina_ import application
+from ursina_.scene import instance as scene
+from ursina_.window import instance as window
+from ursina_ import color
+from ursina_.texture import Texture
+from ursina_.shader import Shader
 
 
 
@@ -195,7 +195,7 @@ instance = Camera()
 
 
 if __name__ == '__main__':
-    from ursina import *
+    from ursina_ import *
     window.borderless = False
     app = Ursina()
 
@@ -219,7 +219,7 @@ if __name__ == '__main__':
     EditorCamera()
     # from ursina import *
     # Button(text='test button')
-    from ursina.shaders import camera_grayscale_shader
+    from ursina_.shaders import camera_grayscale_shader
     camera.shader = camera_grayscale_shader
 
     # def update():

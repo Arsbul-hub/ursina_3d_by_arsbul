@@ -1,4 +1,4 @@
-from ursina import *
+from ursina_ import *
 
 
 class Tooltip(Text):

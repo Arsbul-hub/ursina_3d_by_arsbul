@@ -1,4 +1,4 @@
-from ursina import *
+from ursina_ import *
 
 class NoclipMode:
     def __init__(self, speed=10, require_key='shift'):

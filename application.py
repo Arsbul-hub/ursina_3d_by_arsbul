@@ -65,7 +65,7 @@ def resume():
         seq.resume()
 
 def quit():
-    from ursina import invoke
+    from ursina_ import invoke
     invoke(sys.exit, delay=.01)
 
 

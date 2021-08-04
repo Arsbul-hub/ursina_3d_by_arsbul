@@ -1,4 +1,4 @@
-from ursina import *
+from ursina_ import *
 
 class TrailRenderer(Entity):
     def __init__(self, target=None, **kwargs):

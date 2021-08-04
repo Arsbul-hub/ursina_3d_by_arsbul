@@ -1,9 +1,9 @@
 import operator
 from math import sqrt, sin, acos
 from panda3d.core import Vec4, LVector3f, Mat3, Mat4
-from ursina.vec2 import Vec2
-from ursina.vec3 import Vec3
-from ursina.color import Color
+from ursina_.vec2 import Vec2
+from ursina_.vec3 import Vec3
+from ursina_.color import Color
 internal_sum = sum
 
 
@@ -131,7 +131,7 @@ def sum(l):
 
 
 if __name__ == '__main__':
-    from ursina import *
+    from ursina_ import *
     app = Ursina()
     e1 = Entity(position = (0,0,0))
     e2 = Entity(position = (0,1,1))

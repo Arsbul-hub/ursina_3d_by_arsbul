@@ -3,33 +3,33 @@ import importlib
 import glob
 from pathlib import Path
 from panda3d.core import NodePath
-from ursina.vec3 import Vec3
+from ursina_.vec3 import Vec3
 from panda3d.core import Vec4, Vec2
 from panda3d.core import TransparencyAttrib
 from panda3d.core import Shader
 from panda3d.core import TextureStage, TexGenAttrib
 
-from ursina.texture import Texture
+from ursina_.texture import Texture
 from panda3d.core import MovieTexture
 from panda3d.core import TextureStage
 from panda3d.core import CullFaceAttrib
-from ursina import application
-from ursina.collider import *
-from ursina.mesh import Mesh
-from ursina.sequence import Sequence, Func, Wait
-from ursina.ursinamath import lerp
-from ursina import curve
-from ursina.curve import CubicBezier
-from ursina.mesh_importer import load_model
-from ursina.texture_importer import load_texture
-from ursina.string_utilities import camel_to_snake
+from ursina_ import application
+from ursina_.collider import *
+from ursina_.mesh import Mesh
+from ursina_.sequence import Sequence, Func, Wait
+from ursina_.ursinamath import lerp
+from ursina_ import curve
+from ursina_.curve import CubicBezier
+from ursina_.mesh_importer import load_model
+from ursina_.texture_importer import load_texture
+from ursina_.string_utilities import camel_to_snake
 from textwrap import dedent
 from panda3d.core import Shader as Panda3dShader
-from ursina.shader import Shader
+from ursina_.shader import Shader
 
-from ursina import color
+from ursina_ import color
 try:
-    from ursina.scene import instance as scene
+    from ursina_.scene import instance as scene
 except:
     pass
 
@@ -660,7 +660,7 @@ class Entity(NodePath):
 
     @property
     def screen_position(self): # get screen position(ui space) from world space.
-        from ursina import camera
+        from ursina_ import camera
         p3 = camera.getRelativePoint(self, Vec3.zero())
         full = camera.lens.getProjectionMat().xform(Vec4(*p3, 1))
         recip_full3 = 1 / full[3]
@@ -823,7 +823,7 @@ class Entity(NodePath):
 
 
     def generate_sphere_map(self, size=512, name=f'sphere_map_{len(scene.entities)}'):
-        from ursina import camera
+        from ursina_ import camera
         _name = 'textures/' + name + '.jpg'
         org_pos = camera.position
         camera.position = self.position
@@ -836,7 +836,7 @@ class Entity(NodePath):
 
 
     def generate_cube_map(self, size=512, name=f'cube_map_{len(scene.entities)}'):
-        from ursina import camera
+        from ursina_ import camera
         _name = 'textures/' + name
         org_pos = camera.position
         camera.position = self.position
@@ -902,7 +902,7 @@ class Entity(NodePath):
 
 
     def combine(self, analyze=False, auto_destroy=True, ignore=[]):
-        from ursina.scripts.combine import combine
+        from ursina_.scripts.combine import combine
 
         self.model = combine(self, analyze, auto_destroy, ignore)
         return self.model
@@ -1009,7 +1009,7 @@ class Entity(NodePath):
 #------------
     def animate(self, name, value, duration=.1, delay=0, curve=curve.in_expo, loop=False, resolution=None, interrupt='kill', time_step=None, auto_destroy=True):
         if delay:
-            from ursina.ursinastuff import invoke
+            from ursina_.ursinastuff import invoke
             return invoke(self.animate, name, value, duration=duration, curve=curve, loop=loop, resolution=resolution, time_step=time_step, auto_destroy=auto_destroy, delay=delay)
 
         animator_name = name + '_animator'
@@ -1097,13 +1097,13 @@ class Entity(NodePath):
         if isinstance(self.collider, MeshCollider):
             raise Exception('''error: mesh colliders can't intersect other shapes, only primitive shapes can. Mesh colliders can "recieve" collisions though.''')
 
-        from ursina.hit_info import HitInfo
+        from ursina_.hit_info import HitInfo
 
         if not self.collision or not self.collider:
             self.hit = HitInfo(hit=False)
             return self.hit
 
-        from ursina import distance
+        from ursina_ import distance
         if not hasattr(self, '_picker'):
             from panda3d.core import CollisionTraverser, CollisionNode, CollisionHandlerQueue
             from panda3d.core import CollisionRay, CollisionSegment, CollisionBox
@@ -1171,7 +1171,7 @@ class Entity(NodePath):
 
 
 if __name__ == '__main__':
-    from ursina import *
+    from ursina_ import *
     app = Ursina()
 
     e = Entity(model='quad', color=color.orange, position=(0,0,1), scale=1.5, rotation=(0,0,45), texture='brick')

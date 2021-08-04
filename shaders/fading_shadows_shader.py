@@ -1,4 +1,4 @@
-from ursina import *; fading_shadows_shader = Shader(language=Shader.GLSL, vertex = '''#version 150
+from ursina_ import *; fading_shadows_shader = Shader(language=Shader.GLSL, vertex ='''#version 150
 
 uniform mat4 p3d_ModelViewProjectionMatrix;
 uniform mat4 p3d_ModelViewMatrix;
@@ -34,7 +34,7 @@ void main() {
   texcoords = p3d_MultiTexCoord0;
 }
 ''',
-fragment='''
+                                                      fragment='''
 in vec3 vpos;
 in vec3 norm;
 
@@ -50,10 +50,10 @@ void main() {
 
 
 ''',
-)
+                                                      )
 if __name__ == '__main__':
-    from ursina import *
-    from ursina.prefabs.primitives import *
+    from ursina_ import *
+    from ursina_.prefabs.primitives import *
     app = Ursina()
     shader = fading_shadows_shader
 

@@ -1,7 +1,7 @@
-from ursina import *
-from ursina import distance as ursina_distance
+from ursina_ import *
+from ursina_ import distance as ursina_distance
 from math import inf
-from ursina.hit_info import HitInfo
+from ursina_.hit_info import HitInfo
 
 
 

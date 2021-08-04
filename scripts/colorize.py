@@ -1,7 +1,7 @@
-from ursina import *
-from ursina import color
+from ursina_ import *
+from ursina_ import color
 import math
-from ursina.vec3 import Vec3
+from ursina_.vec3 import Vec3
 # import numpy as np
 
 

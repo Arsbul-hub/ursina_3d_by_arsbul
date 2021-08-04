@@ -1,14 +1,14 @@
 import sys
 
-from ursina import *
-from ursina.entity import Entity
-from ursina.mesh import Mesh
-from ursina.scene import instance as scene
+from ursina_ import *
+from ursina_.entity import Entity
+from ursina_.mesh import Mesh
+from ursina_.scene import instance as scene
 from panda3d.core import CollisionTraverser, CollisionNode, CollisionHandlerQueue
 from panda3d.core import CollisionRay, CollisionSegment, CollisionBox
-from ursina.vec3 import Vec3
+from ursina_.vec3 import Vec3
 from math import sqrt, inf
-from ursina.hit_info import HitInfo
+from ursina_.hit_info import HitInfo
 
 
 class Raycaster(Entity):

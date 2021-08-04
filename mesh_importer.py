@@ -4,8 +4,8 @@ import platform
 import subprocess
 from copy import copy, deepcopy
 from pathlib import Path
-from ursina.mesh import Mesh
-from ursina import application
+from ursina_.mesh import Mesh
+from ursina_ import application
 from panda3d.core import CullFaceAttrib
 from time import perf_counter
 
@@ -377,7 +377,7 @@ def compress_models_fast(model_name=None, write_to_disk=False):
                 return file_content
 
 def ursina_mesh_to_obj(mesh, name='', out_path=application.compressed_models_folder, max_decimals=3):
-    from ursina.string_utilities import camel_to_snake
+    from ursina_.string_utilities import camel_to_snake
 
     if not name:
         name = camel_to_snake(mesh.__class__.__name__)
@@ -443,7 +443,7 @@ def compress_internal():
 
 if __name__ == '__main__':
     # compress_internal()
-    from ursina import *
+    from ursina_ import *
     app = Ursina()
     print('imported_meshes:\n', imported_meshes)
     # Entity(model='quad').model.save('quad.bam')
@@ -453,8 +453,8 @@ if __name__ == '__main__':
 
     application.asset_folder = application.asset_folder.parent / 'samples'
     # from ursina.shaders import basic_lighting_shader
-    from ursina.shaders import normals_shader as rim_shader
-    from ursina.shaders import matcap_shader as rim_shader
+    from ursina_.shaders import normals_shader as rim_shader
+    from ursina_.shaders import matcap_shader as rim_shader
     # from ursina.shaders import height_shader as rim_shader
 
 

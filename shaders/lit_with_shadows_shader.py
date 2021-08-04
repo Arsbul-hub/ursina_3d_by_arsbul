@@ -1,4 +1,4 @@
-from ursina import *; lit_with_shadows_shader = Shader(language=Shader.GLSL, vertex = '''#version 150
+from ursina_ import *; lit_with_shadows_shader = Shader(language=Shader.GLSL, vertex ='''#version 150
 uniform struct {
   vec4 position;
   vec3 color;
@@ -39,7 +39,7 @@ void main() {
 }
 
 ''',
-fragment='''
+                                                        fragment='''
 #version 150
 uniform struct {
   vec4 position;
@@ -133,18 +133,18 @@ void main() {
 }
 
 ''',
-default_input = {
+                                                        default_input = {
     'texture_scale': Vec2(1,1),
     'texture_offset': Vec2(0,0),
     'shadow_color' : Vec4(0, .5, 1, .25),
     }
-)
+                                                        )
 
 
 
 if __name__ == '__main__':
-    from ursina import *
-    from ursina.prefabs.primitives import *
+    from ursina_ import *
+    from ursina_.prefabs.primitives import *
     # window.size *= .5
     app = Ursina()
     shader = lit_with_shadows_shader
@@ -155,7 +155,7 @@ if __name__ == '__main__':
 
 
     # Enable shadows; we need to set a frustum for that.
-    from ursina.lights import DirectionalLight
+    from ursina_.lights import DirectionalLight
     # sun = DirectionalLight(y=10, rotation=(90+30,90,0))
     sun = DirectionalLight()
     sun.look_at(Vec3(-1,-1,-1))

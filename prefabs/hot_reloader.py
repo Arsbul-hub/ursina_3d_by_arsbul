@@ -1,9 +1,9 @@
 # this will clear the scene and try to execute the main.py code without
 # restarting the program
 
-from ursina import *
-from ursina import texture_importer
-from ursina import mesh_importer
+from ursina_ import *
+from ursina_ import texture_importer
+from ursina_ import mesh_importer
 import time
 import ast
 
@@ -205,9 +205,9 @@ class HotReloader(Entity):
 
 
     def reload_shaders(self):
-        import ursina
+        import ursina_
 
-        for shader in ursina.shader.imported_shaders:
+        for shader in ursina_.shader.imported_shaders:
             # print(shader, shader.path)
             # TODO: check if file has changed
 
@@ -341,7 +341,7 @@ class HotReloader(Entity):
 
 
 if __name__ == '__main__':
-    from ursina import *
+    from ursina_ import *
     app = Ursina()
     # hot_reloader = HotReloader()
     application.hot_reloader.path = application.asset_folder.parent.parent / 'samples' / 'platformer.py'
@@ -357,8 +357,8 @@ if __name__ == '__main__':
     # button = Button(text='test button', scale=.75, model=Circle(32), color=color.red)
 
     # test
-    from ursina.shaders import lit_with_shadows_shader
-    from ursina.prefabs.primitives import *
+    from ursina_.shaders import lit_with_shadows_shader
+    from ursina_.prefabs.primitives import *
 
     shader = lit_with_shadows_shader
 
@@ -369,7 +369,7 @@ if __name__ == '__main__':
 
 
     # Enable shadows; we need to set a frustum for that.
-    from ursina.lights import DirectionalLight
+    from ursina_.lights import DirectionalLight
     sun = DirectionalLight(y=10, rotation=(90+30,90,0))
     sun._light.show_frustum()
 

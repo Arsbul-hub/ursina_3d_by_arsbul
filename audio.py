@@ -1,4 +1,4 @@
-from ursina import *
+from ursina_ import *
 from panda3d.core import Filename
 
 # Set to avoid name-space conflicts in the Audio class.
@@ -165,7 +165,7 @@ class Audio(Entity):
 
 
 if __name__ == '__main__':
-    from ursina import Ursina, printvar
+    from ursina_ import Ursina, printvar
 
     app = Ursina()
     # a = Audio('life_is_currency_wav', pitch=1)

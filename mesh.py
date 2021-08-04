@@ -3,12 +3,12 @@ from panda3d.core import GeomVertexData, GeomVertexFormat, Geom, GeomVertexWrite
 from panda3d.core import GeomTriangles, GeomTristrips, GeomTrifans
 from panda3d.core import GeomLines, GeomLinestrips, GeomPoints
 from panda3d.core import TexGenAttrib, TextureStage
-from ursina.vec3 import Vec3
-from ursina.scripts.generate_normals import generate_normals
-from ursina.scripts.project_uvs import project_uvs
-from ursina.scripts.colorize import colorize
-from ursina import color
-from ursina import application
+from ursina_.vec3 import Vec3
+from ursina_.scripts.generate_normals import generate_normals
+from ursina_.scripts.project_uvs import project_uvs
+from ursina_.scripts.colorize import colorize
+from ursina_ import color
+from ursina_ import application
 from textwrap import dedent
 from enum import Enum
 from pathlib import Path
@@ -263,7 +263,7 @@ class Mesh(NodePath):
             print('saved .ursinamesh to:', path / name)
 
         elif name.endswith('.obj'):
-            from ursina.mesh_importer import ursina_mesh_to_obj
+            from ursina_.mesh_importer import ursina_mesh_to_obj
             ursina_mesh_to_obj(self, name, path)
 
         elif name.endswith('.bam'):
@@ -274,7 +274,7 @@ class Mesh(NodePath):
 
 
 if __name__ == '__main__':
-    from ursina import *
+    from ursina_ import *
 
     app = Ursina()
 

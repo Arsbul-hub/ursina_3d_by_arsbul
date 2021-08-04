@@ -1,6 +1,6 @@
-from ursina import *
-from ursina.prefabs.button import Button
-from ursina.models.procedural.quad import Quad
+from ursina_ import *
+from ursina_.prefabs.button import Button
+from ursina_.models.procedural.quad import Quad
 
 class Panel(Entity):
 

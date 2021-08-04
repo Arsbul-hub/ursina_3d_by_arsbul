@@ -1,7 +1,7 @@
 from panda3d.core import *
 from panda3d.core import NodePath
-from ursina.vec3 import Vec3
-from ursina.mesh import Mesh
+from ursina_.vec3 import Vec3
+from ursina_.mesh import Mesh
 from direct.showbase.ShowBase import ShowBase
 
 class Collider(NodePath):
@@ -158,7 +158,7 @@ class MeshCollider(Collider):
 
 
 if __name__ == '__main__':
-    from ursina import *
+    from ursina_ import *
     app = Ursina()
 
     e = Entity(model='sphere', x=2)

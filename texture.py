@@ -5,7 +5,7 @@ from panda3d.core import Filename
 from pathlib import Path
 from direct.showbase import Loader
 import sys
-from ursina import color
+from ursina_ import color
 # from PIL import Image
 
 
@@ -155,7 +155,7 @@ class Texture():
         self._cached_image.save(path)
 
 if __name__ == '__main__':
-    from ursina import *
+    from ursina_ import *
     app = Ursina()
     '''
         The Texture class rarely used manually but usually instantiated

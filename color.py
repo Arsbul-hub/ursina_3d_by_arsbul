@@ -162,7 +162,7 @@ for cn in color_names:
 
 
 if __name__ == '__main__':
-    from ursina import *
+    from ursina_ import *
     app = Ursina()
 
     print(color.brightness(color.blue))

@@ -1,5 +1,5 @@
-from ursina import *
-from ursina.shaders import lit_with_shadows_shader, unlit_shader
+from ursina_ import *
+from ursina_.shaders import lit_with_shadows_shader, unlit_shader
 from time import perf_counter
 
 

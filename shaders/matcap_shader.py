@@ -1,4 +1,4 @@
-from ursina import *; matcap_shader = Shader(language=Shader.GLSL, vertex = '''#version 140
+from ursina_ import *; matcap_shader = Shader(language=Shader.GLSL, vertex ='''#version 140
 uniform mat4 p3d_ModelViewProjectionMatrix;
 uniform mat4 p3d_ModelMatrix;
 uniform mat4 p3d_ModelViewMatrix;
@@ -34,7 +34,7 @@ void main() {
     // uv = r.xy / m + .5;
 }
 ''',
-fragment='''
+                                              fragment='''
 #version 130
 uniform sampler2D p3d_Texture0;
 uniform vec4 p3d_ColorScale;
@@ -55,13 +55,13 @@ void main() {
 }
 
 ''',
-)
+                                              )
 
 
 
 if __name__ == '__main__':
-    from ursina import *
-    from ursina.prefabs.primitives import *
+    from ursina_ import *
+    from ursina_.prefabs.primitives import *
     app = Ursina()
     window.color=color.black
 

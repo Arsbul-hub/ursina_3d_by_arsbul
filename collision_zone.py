@@ -1,4 +1,4 @@
-from ursina import *
+from ursina_ import *
 
 
 class CollisionZone(Entity):
@@ -78,13 +78,13 @@ if __name__ == '__main__':
     in order to improve performance.
     '''
 
-    from ursina.shaders import basic_lighting_shader
+    from ursina_.shaders import basic_lighting_shader
     window.vsync = False
     app = Ursina()
 
     application.asset_folder = application.asset_folder.parent
     terrain = Entity(model='heightmap_test', scale=32, texture='grass', collider='mesh', shader=basic_lighting_shader)
-    from ursina.prefabs.first_person_controller import FirstPersonController
+    from ursina_.prefabs.first_person_controller import FirstPersonController
     player = FirstPersonController(speed=10)
     collision_zone = CollisionZone(parent=player, radius=32)
 

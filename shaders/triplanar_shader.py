@@ -1,4 +1,4 @@
-from ursina import *
+from ursina_ import *
 
 
 triplanar_shader = Shader(
@@ -93,8 +93,8 @@ default_input = {
 
 
 if __name__ == '__main__':
-    from ursina import *
-    from ursina.prefabs.primitives import *
+    from ursina_ import *
+    from ursina_.prefabs.primitives import *
     app = Ursina()
     window.color=color.black
 

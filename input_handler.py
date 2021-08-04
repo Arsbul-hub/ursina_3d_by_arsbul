@@ -124,7 +124,7 @@ def input(key):
 
 
 if __name__ == '__main__':
-    from ursina import *
+    from ursina_ import *
 
     app = Ursina()
     input_handler.bind('s', 'arrow down')  # 's'-key will now be registered as 'arrow down'-key

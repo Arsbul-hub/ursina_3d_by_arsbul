@@ -8,11 +8,11 @@ import subprocess
 import time
 from pathlib import Path
 
-from ursina import application
-from ursina.text import Text
-from ursina.window import instance as window
-from ursina.scene import instance as scene
-from ursina.sequence import Sequence, Func, Wait
+from ursina_ import application
+from ursina_.text import Text
+from ursina_.window import instance as window
+from ursina_.scene import instance as scene
+from ursina_.sequence import Sequence, Func, Wait
 
 
 class Empty():
@@ -107,7 +107,7 @@ def find_sequence(name, file_types, folders): # find frame_0, frame_1, frame_2 a
 def import_all_classes(path=application.asset_folder, debug=False):
     path = str(path)
     sys.path.append(path)
-    from ursina.string_utilities import snake_to_camel
+    from ursina_.string_utilities import snake_to_camel
     from glob import iglob
     imported_successfully = list()
 
@@ -145,7 +145,7 @@ def print_on_screen(text, position=window.top_left, origin=(-.5,.5), scale=1, du
 
 if __name__ == '__main__':
 
-    from ursina import *
+    from ursina_ import *
     app = Ursina()
     def test_func(item, x=None, y=None):
         print(item, x, y)

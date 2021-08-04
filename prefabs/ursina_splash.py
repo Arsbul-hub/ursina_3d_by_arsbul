@@ -1,4 +1,4 @@
-from ursina import *
+from ursina_ import *
 
 if __name__ == '__main__':
     app = Ursina()

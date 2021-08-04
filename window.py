@@ -3,10 +3,10 @@ import os
 from panda3d.core import WindowProperties
 from panda3d.core import loadPrcFileData
 from panda3d.core import Vec2
-from ursina.entity import Entity
-from ursina import color
-from ursina import application
-from ursina.scene import instance as scene    # for toggling collider visibility
+from ursina_.entity import Entity
+from ursina_ import color
+from ursina_ import application
+from ursina_.scene import instance as scene    # for toggling collider visibility
 
 
 class Window(WindowProperties):
@@ -76,7 +76,7 @@ class Window(WindowProperties):
         self.render_mode = 'default'
         self.editor_ui = None
 
-        from ursina import invoke
+        from ursina_ import invoke
         invoke(base.accept, 'aspectRatioChanged', self.update_aspect_ratio, delay=1/60)
 
     @property
@@ -107,7 +107,7 @@ class Window(WindowProperties):
             )
 
     def make_editor_gui(self):     # called by main after setting up camera and application.development_mode
-        from ursina import camera, Text, Button, ButtonList, Func, Tooltip
+        from ursina_ import camera, Text, Button, ButtonList, Func, Tooltip
         import time
 
         self.editor_ui = Entity(parent=camera.ui, eternal=True, enabled=bool(application.development_mode))
@@ -115,7 +115,7 @@ class Window(WindowProperties):
             position=self.top_right, z=-999, scale=(.05, .025), color=color.red.tint(-.2), text='x', on_click=application.quit)
 
         def _exit_button_input(key):
-            from ursina import held_keys, mouse
+            from ursina_ import held_keys, mouse
             if held_keys['shift'] and key == 'q' and not mouse.right:
                 self.exit_button.on_click()
         self.exit_button.input = _exit_button_input
@@ -168,7 +168,7 @@ class Window(WindowProperties):
         self.size = base.win.get_size()
         print('changed aspect ratio:', round(prev_aspect, 3), '->', round(self.aspect_ratio, 3))
 
-        from ursina import camera, window, application
+        from ursina_ import camera, window, application
         camera.ui_lens.set_film_size(camera.ui_size * .5 * self.aspect_ratio, camera.ui_size * .5)
         for e in [e for e in scene.entities if e.parent == camera.ui] + self.editor_ui.children:
             e.x /= prev_aspect / self.aspect_ratio
@@ -198,7 +198,7 @@ class Window(WindowProperties):
     def size(self, value):
         self.set_size(int(value[0]), int(value[1]))
         self.aspect_ratio = value[0] / value[1]
-        from ursina import camera
+        from ursina_ import camera
         camera.set_shader_input('window_size', value)
 
 
@@ -234,7 +234,7 @@ class Window(WindowProperties):
                     e.collider.visible = True
 
         if value == 'normals':
-            from ursina.shaders import normals_shader
+            from ursina_.shaders import normals_shader
             for e in [e for e in scene.entities if e.model and e.alpha]:
                 e.shader = normals_shader
                 e.set_shader_input('transform_matrix', e.getNetTransform().getMat())
@@ -323,7 +323,7 @@ instance = Window()
 
 
 if __name__ == '__main__':
-    from ursina import *
+    from ursina_ import *
     # application.development_mode = False
     window.vsync = 30
     app = Ursina()

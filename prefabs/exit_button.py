@@ -1,4 +1,4 @@
-from ursina import *
+from ursina_ import *
 
 class ExitButton(Button):
     def __init__(self, **kwargs):

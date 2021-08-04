@@ -1,4 +1,4 @@
-from ursina import *
+from ursina_ import *
 
 texture_blend_shader = Shader(language=Shader.GLSL,
 fragment='''
@@ -56,7 +56,7 @@ default_input = {
 )
 
 if __name__ == '__main__':
-    from ursina import *
+    from ursina_ import *
     app = Ursina()
 
     e = Entity(model='quad', shader=texture_blend_shader, texture='shore')

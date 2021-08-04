@@ -1,4 +1,4 @@
-from ursina import *; screen_space_normals_shader = Shader(language=Shader.GLSL, fragment='''
+from ursina_ import *; screen_space_normals_shader = Shader(language=Shader.GLSL, fragment='''
 #version 140
 
 uniform vec4 p3d_ColorScale;
@@ -77,11 +77,11 @@ void main() {
 }
 
 ''',
-)
+                                                            )
 
 
 if __name__ == '__main__':
-    from ursina import *
+    from ursina_ import *
     app = Ursina()
 
     e = Entity(model='sphere', color=color.orange)

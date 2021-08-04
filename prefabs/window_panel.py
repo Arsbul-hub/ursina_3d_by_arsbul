@@ -1,5 +1,5 @@
-from ursina import *
-from ursina.prefabs.input_field import InputField
+from ursina_ import *
+from ursina_.prefabs.input_field import InputField
 
 
 class Space():
